@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-h7km-y1mn6pzk#$1ziaj$s^j$h%=e*he+rax$-5ajg#1c1*zqe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['20.119.16.43']
+ALLOWED_HOSTS = ['162.240.229.53','practcode.com']
 
 
 # Application definition
@@ -134,12 +134,13 @@ SIMPLE_JWT = {
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        "NAME": "practcode",
-        "ENGINE": "django.db.backends.mysql",
-        "USER": "root",
-        "PASSWORD": "",
-        "PORT":3306,
+   'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'cizdesmy_practcode2',
+        'USER': 'cizdesmy_practcode2',
+        'PASSWORD': 'Pinklips@786',
+        'HOST': '162.240.229.53',
+        'PORT': '',  # Default MySQL port
     }
 }
 # DATABASES = {
