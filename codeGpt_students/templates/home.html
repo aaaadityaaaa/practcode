@@ -1,0 +1,103 @@
+{% extends "index.html" %} {% block title %} - Home{% endblock %}
+{% block headcontain %}
+ {% load static %}
+<link rel="stylesheet" href="{% static 'css/homePage/home.css' %}" />
+<link rel="stylesheet" href="{% static 'css/homePage/vectors.css' %}" />
+{% endblock %} 
+{% block Mainroot %}
+
+<div class="homePageVector">
+sdfg
+</div>
+
+<div class="courseContainer">
+  <h2 class="courseContainerTitle">Courses</h2>
+  <div class="CourseInnerbox">
+    <div class="courseCard">
+      <h4>Learn VueJs</h4>
+      <div class="CourseratingBox">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+      </div>
+      <div class="courseCardImg"></div>
+      <div class="courseDiscription">
+        <h5>ADVANCED</h5>
+        <p>
+          molestiae aliquam placeat quasi sed totam facere minus eveniet quas
+          voluptas!
+        </p>
+        <span>#VueJs</span>
+      </div>
+    </div>
+
+    <div class="courseCard">
+      <h4>Github Webhooks for Beginners</h4>
+      <div class="CourseratingBox">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+      </div>
+      <div class="courseCardImg"></div>
+      <div class="courseDiscription">
+        <h5>ADVANCED</h5>
+        <p>
+          molestiae aliquam placeat quasi sed totam facere minus eveniet quas
+          voluptas!
+        </p>
+        <span>#GULP</span>
+      </div>
+    </div>
+
+    <div class="courseCard">
+      <h4>Npm & Gulp Advanced Workflow</h4>
+      <div class="CourseratingBox">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+      </div>
+      <div class="courseCardImg"></div>
+      <div class="courseDiscription">
+        <h5>ADVANCED</h5>
+        <p>
+          molestiae aliquam placeat quasi sed totam facere minus eveniet quas
+          voluptas!
+        </p>
+        <span>#tagName</span>
+      </div>
+    </div>
+
+    <div class="courseCard">
+      <h4>Gulp & Slush Workflows</h4>
+      <div class="CourseratingBox">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+      </div>
+      <div class="courseCardImg"></div>
+      <div class="courseDiscription">
+        <h5>ADVANCED</h5>
+        <p>
+          molestiae aliquam placeat quasi sed totam facere minus eveniet quas
+          voluptas!
+        </p>
+        <span>#Js</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block scriptcontain %}
+<script>
+  console.log("hello from home....");
+</script>
+
+{% endblock %}

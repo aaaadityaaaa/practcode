@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ● Practcode {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/PractCodePageLoader.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/lo.png' %}">
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/215c5cf425.js" crossorigin="anonymous"></script>
+    {% block headcontain %}{% endblock %}
+</head>
+<body>
+    <div id="preloader" style="background:  #8cc5dd url({% static 'img/preloader.gif' %}) no-repeat center ;background-size: 18%"></div>
+    <nav class="PractcodeNav">
+        <button onclick="PractcodetoggleSidenav()" class="PractcodeNavsidebartoggleBtn"><i class="fa-solid fa-bars"></i></button>
+        <div class="PractcodeNav_heading_logo" style="display: flex;" > <img alt="Practcode" src="{% static 'img/lo.png' %}" style="width: 50px; height: 40px;"></img>
+            <h3 style="padding-top: 10px;">PRACTCODE</h3>
+        </div>
+        <div class="PractcodeNav_Searchbox">
+            <input type="text" placeholder="Search">
+            <button class="serachbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="PractcodeNav_options">
+
+            <button class="PractcodeNav_login">Log in</button>
+            <button class="PractcodeNav_signup">Sign up</button>
+
+            <div class="PractcodeNav_notify">
+                <i class="fa-solid fa-bell"></i>
+                <p id="PractcodeNav_notify">9+</p>
+            </div>
+            
+            <button class="PractcodeNavProfile_btn" id="dropdown-button">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-caret-down"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="PractcodeProfiledropdown" id="dropdown-content">
+        <a href=""><button><i class="fa-solid fa-user"></i> Profile</button></a>
+        <br>
+        <a href=""><button><i class="fa-regular fa-pen-to-square"></i> Edit profile</button></a>
+        <br>
+        <a href=""><button><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button></a>
+    </div>
+    <div class="PractcodeNavSideBody">
+        <div id="PractcodeSideNavid" class="PractcodeSide_nav" >
+            <div class="PractcodeSideNavDetails">
+                <i class="fa-solid fa-list PractcodeSideNavDetailsIcon"></i>
+                <p class="PractcodeSideNavDetailsText">Contains</p>
+            </div>
+
+            <!-- contains when user is not loged in -->
+            <div id="PractcodeSidebar_userstatusid" class="PractcodeSidebar_userstatus">
+                <h3>Practcode</h3>
+                <a href="/login"><button>Log in</button></a>
+                <h5>Or</h5>
+                <a href="/sign-up"><button>Sign up</button></a>
+            </div>
+
+
+
+        </div>
+
+
+        <!-- other section comes here -->
+        <div id="PractcodeMainRootid" class="practcodeMainRoot">
+            {% block Mainroot %}
+            {% endblock %}
+        </div>
+    
+    </div>
+
+<script>
+    var loader = document.getElementById("preloader")
+    window.addEventListener('load',function(){
+        loader.style.display="none"
+    })
+
+</script>
+
+</body>
+<script src="{% static 'script/index.js' %}"></script>
+{% block scriptcontain %}{% endblock %}
+
+</html>
